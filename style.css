@@ -1,0 +1,341 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+/* basic elements */
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Silkscreen:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 1rem/1.5rem; }
+
+p, h1, h2, h3 {
+  text-shadow: 0px 0px 7px #000;
+  color: #FFF; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  position: relative; }
+
+p {
+  margin-top: 1rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000; }
+
+h1 {
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.56163rem;
+  text-transform: uppercase;
+  color: 0;
+  text-align: center;
+  padding: 1rem 0; }
+
+h2 {
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.625rem 0; }
+
+h3 {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center; }
+
+a {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-decoration: none; }
+
+.summary a {
+  display: flex;
+  padding: 0.625rem 0;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--yellow, #FFD600);
+  width: 6.8rem;
+  color: var(--black, #000);
+  text-align: center;
+  text-shadow: none; }
+.summary a:nth-child(1) {
+  margin: 1rem auto; }
+.summary a:nth-child(2) {
+  margin: 1rem auto 0rem; }
+.summary a:hover {
+  background: #FF9100; }
+
+footer {
+  display: flex; }
+  footer a {
+    display: flex;
+    padding: 0.625rem 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--yellow, #FFD600);
+    width: 100%;
+    text-align: center;
+    text-shadow: none;
+    border: 1px solid #000; }
+  footer a.zen-validate-html, footer a.zen-validate-css, footer a.zen-license, footer a.zen-accessibility, footer a.zen-github {
+    color: black; }
+  footer a:hover {
+    background: #FF9100; }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column; }
+  .page-wrapper .intro {
+    order: 2; }
+  .page-wrapper .main {
+    order: 3; }
+  .page-wrapper .sidebar {
+    order: 1; }
+
+.summary, .banner {
+  padding: 0 4rem; }
+
+.summary {
+  padding-bottom: 2rem; }
+
+.preamble, .explanation, .participation, .benefits, .requirements {
+  border-top: 4px solid var(--white, #FFF);
+  padding: 0 4rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+.intro {
+  background-image: url("backrground city.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 70%; }
+
+.main {
+  background: var(--purple-to-red-gradient, linear-gradient(180deg, #5A1683 0%, #960000 100%));
+  position: relative; }
+  .main a {
+    color: white;
+    font-weight: 800; }
+  .main a:hover {
+    text-decoration: underline;
+    text-decoration-color: white; }
+  .main footer a {
+    font-weight: 400; }
+  .main footer a:hover {
+    text-decoration: none; }
+
+.preamble h3::after, .main h3::after {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 1.875rem;
+  background-image: url("coin.svg");
+  background-size: cover;
+  position: relative;
+  left: 5%;
+  animation: blink 5s linear infinite, float 5s linear infinite; }
+
+.requirements {
+  width: 100%;
+  background-image: url("fire.svg");
+  background-size: 12rem;
+  background-repeat: repeat-x;
+  background-position: left 105%;
+  animation: inferno 5s linear infinite;
+  position: relative;
+  padding-bottom: 5rem;
+  overflow: hidden; }
+
+.sidebar {
+  display: block;
+  background-color: #E37A81;
+  background-image: url("sky background.png");
+  background-position: top 30%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 2rem; }
+  .sidebar .wrapper {
+    display: flex;
+    flex-direction: column; }
+    .sidebar .wrapper h3 {
+      margin-bottom: 1rem; }
+    .sidebar .wrapper .design-archives {
+      order: 1; }
+      .sidebar .wrapper .design-archives nav ul {
+        display: flex;
+        align-items: stretch; }
+        .sidebar .wrapper .design-archives nav ul li {
+          width: 100%;
+          display: flex;
+          list-style-type: none; }
+          .sidebar .wrapper .design-archives nav ul li a {
+            width: 100%;
+            margin: 0 auto;
+            background: var(--yellow, #FFD600);
+            color: var(--black, #000);
+            text-align: center;
+            text-shadow: none;
+            border: 1px solid var(--black, #000);
+            padding: 1rem; }
+    .sidebar .wrapper .design-selection {
+      order: 2;
+      margin: 1rem auto;
+      overflow: hidden;
+      width: 100%; }
+      .sidebar .wrapper .design-selection nav ul {
+        display: flex;
+        gap: 0.25rem; }
+        .sidebar .wrapper .design-selection nav ul li {
+          padding: 0.5rem;
+          justify-content: center;
+          align-items: center;
+          gap: 0.125rem;
+          border: 1px solid var(--black, #000);
+          background: var(--pale-blue, #41547D);
+          color: var(--white, #FFF);
+          text-align: center;
+          font-family: 'Silkscreen', sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          animation: moving 20s linear infinite;
+          list-style: none; }
+          .sidebar .wrapper .design-selection nav ul li a {
+            justify-content: center;
+            align-items: center;
+            color: white; }
+    .sidebar .wrapper .zen-resources {
+      order: 3; }
+      .sidebar .wrapper .zen-resources li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem; }
+        .sidebar .wrapper .zen-resources li a {
+          color: var(--white, #FFF);
+          font-weight: 700;
+          text-shadow: 0px 0px 7px #000;
+          padding: 0.625rem 2rem;
+          width: auto;
+          margin: 0 auto; }
+        .sidebar .wrapper .zen-resources li a:hover {
+          text-shadow: 0px 0px 2px #000;
+          -webkit-text-stroke-width: 1;
+          -webkit-text-stroke-color: var(--black, #000);
+          padding-left: 2.5rem;
+          background-image: url("arrow.svg");
+          background-size: 2rem;
+          background-repeat: no-repeat;
+          background-position: left; }
+
+@media screen and (min-width: 850px) {
+  .preamble, .explanation, .participation, .benefits, .requirements {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center; }
+    .preamble p, .explanation p, .participation p, .benefits p, .requirements p {
+      text-align: left; }
+    .preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+      width: 100rem; }
+
+  .benefits {
+    margin: 0 auto; }
+    .benefits p {
+      margin-right: 30%; }
+
+  .summary p {
+    padding: 0 15rem; }
+
+  .sidebar {
+    background-position: center 30%; } }
+@media screen and (min-width: 1400px) {
+  .summary p {
+    padding: 0 25rem; } }
+.extra1 {
+  position: absolute;
+  bottom: 5rem;
+  left: -14rem;
+  width: 21rem;
+  height: 16.5rem;
+  background-image: url("dragon.svg");
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  animation: peek 7s linear infinite;
+  transform: scaleX(-1) rotate(-30deg); }
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(90deg); }
+  to {
+    transform: rotateY(0deg); } }
+@keyframes blink {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes float {
+  from {
+    transform: translateY(0.2rem); }
+  50% {
+    transform: translateY(-0.2rem); }
+  to {
+    transform: translateY(0.2rem); } }
+@keyframes peek {
+  from {
+    transform: scaleX(-1) rotate(-30deg) translatex(15rem); }
+  50% {
+    transform: scaleX(-1) rotate(-30deg) translateY(-1rem); }
+  60% {
+    transform: scaleX(-1) rotate(-30deg) translateY(-1rem); }
+  to {
+    transform: scaleX(-1) rotate(-30deg) translatex(15rem); } }
+@keyframes dissapear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes inferno {
+  from {
+    background-position: left 103%; }
+  50% {
+    background-position: left 105%; }
+  to {
+    background-position: left 103%; } }
+@keyframes moving {
+  from {
+    transform: translateX(-100vw); }
+  to {
+    transform: translateX(100vw); } }
